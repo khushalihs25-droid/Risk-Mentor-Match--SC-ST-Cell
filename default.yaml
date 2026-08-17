@@ -1,0 +1,24 @@
+data:
+  train_path: data/students.csv
+  target_column: at_risk
+  id_column: student_id
+  feature_columns:
+    - attendance
+    - assignment_avg
+    - quiz_avg
+    - commute_time_min
+    - prior_backlogs
+    - peer_support_score
+  test_size: 0.2
+
+training:
+  seed: 42
+  epochs: 80
+  batch_size: 32
+  learning_rate: 0.001
+  hidden_dim: 32
+  embedding_dim: 12
+  dropout: 0.2
+  focal_gamma: 2.0
+  early_stopping_patience: 12
+  output_dir: outputs
